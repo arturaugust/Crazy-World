@@ -1,2 +1,2 @@
-# 3AR
-Trabalho do Blog
+Crazy World
+Blog retro que simula a internet em 2010.
