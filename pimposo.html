@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <img class="logo" src="img/Design_sem_nome-removebg-preview-removebg-preview.png" alt="Logo">
+                <h2 id="mensagem" class="bem-vindo">Carregando...</h2>
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#footer_content">Converse Comigo!</a></li>
+                <li><a href="cadastro.html" onclick="logout()">Sair</a></li>
+
+                <div class="pesquisa">
+                    <input type="text" class="pesquisando" placeholder="Encontre o seu lugar🌟...">
+                    <a class="botao-pesquisa">
+                        <img class="lupa" src="img/lupa.png" alt="Lupa de pesquisa">
+                    </a>
+                </div>
+            </ul>
+        </nav>
+
+        <script>
+            const usuarioLogin = localStorage.getItem("usuarioLogin");
+
+            if (usuarioLogin) {
+                document.getElementById("mensagem").innerText = `Bem-vindo, ${usuarioLogin}!`;
+            } else {
+                document.getElementById("mensagem").innerText = "Usuário não autenticado!";
+            }
+
+            function logout() {
+                localStorage.removeItem("usuarioLogin");
+                window.location.href = "cadastro.html";
+            }
+        </script>
+    </header>
+    <br> <br>
+    <section class="body-container">
+        <div class="init">
+            <div class="perfil">
+                <img class="foto-perfil" src="img/enzodescolado.png" alt="Foto de perfil">
+                <div class="descricao"><br>
+                    <h2 class="nome-perfil">Enzo👨🏻‍💻</h2><br>
+                    <p>Meu nome é Enzo, O Enzo mais velho que você vai conhecer.</p>
+                    <p>Sou formado em Análise de Desenvolvimento de sistemas pela UNOPAR e professor de análise de
+                        sistemas na PROZ educação.</p>
+                    <p class="status">Status: Online</p>
+                    <p class="atividade">Última atividade: 10 minutos atrás</p> <br>
+                </div>
+            </div>
+        </div><br><br>
+
+        <div class="blog1">
+            <img src="img/tenor.gif">
+            <div class="descricao">
+                <h2>Me sentindo cansado 😫</h2><br>
+                <p>Estou tentando ajeitar essa div, mas está complicado. E, pra completar, meu café acabou. Ou seja,
+                    estou sem café e sem soluções!</p>
+            </div>
+        </div><br><br>
+
+        <div class="blog2">
+            <div class="descricao">
+                <h2>O Que é a Ozen digital?</h2>
+                <br>
+                <p>Somos uma equipe de especialistas apaixonados por tecnologia e criatividade. Nossa missão é elevar a
+                    presença digital do seu negócio a outro patamar.</p> <br>
+                <p>Acreditamos na singularidade de cada empresa e projeto. Por isso, utilizamos uma abordagem
+                    personalizada
+                    que nos permite encontrar a estratégia perfeita e exclusiva para o seu negócio!</p>
+            </div>
+            <img src="img/enzojoia.jpg">
+        </div>
+
+    </section>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contact">
+                <h1>Crazy World</h1>
+                <br>
+                <p>Pensamentos fora da curva para um mundo fora do normal!😝</p>
+                <br>
+                <a class="footer-link" href="bem-vindo.html">Voltar Para O Home!</a><br>
+                <a class="footer-link" href="bocarosa.html"> Boca Rosa🫦</a><br>
+                <a class="footer-link" href="felca.html">Felca🧍</a><br>
+            </div>
+
+            <ul class="footer-list">
+
+                <h3>Sites do divo pop!</h3> <br> 
+
+                <a class="footer-link"
+                    href="https://enzomartinsdev.com/?fbclid=PAZXh0bgNhZW0CMTEAAaYEHcpBJtufSAsWoHmIzD9_c7jImtZF5mxwyLoJYNNVciGO_xU2DPsJY-4_aem_y8efq2ghjsaI4J6JHckn1g"
+                    target="_blank">Enzo Martins Dev</a> <br><br>
+                <a class="footer-link"
+                    href="https://jornalistaalexandreleite.com/?fbclid=PAZXh0bgNhZW0CMTEAAabVnuTo15zrVmkIeqUqYrIibNR8Xz8Mn5xaX9SzMYIeB2Maaw2cKuWT7bU_aem_niMP10AzaCJfIbJ1fPiw4w"
+                    target="_blank">Alexandre Leite</a><br><br>
+                <a class="footer-link" href="https://cesaraugustoadv.com/" target="_blank">César Augusto</a> <br><br>
+                <a class="footer-link"
+                    href="https://www.nerybarber.net.br/?fbclid=PAZXh0bgNhZW0CMTEAAaak6BhloYZeSdmeWxDm5pdfAi9ePmz22tNHiL27PlKI4h2oWe1745IvXqU_aem_JxlCKQ1b3Tc07rMhFNHzMQ"
+                    target="_blank">Nery Barber</a>
+            </ul>
+            <ul class="footer-list">
+                <h4>Enzo e sua programação em dia:</h4>
+                <br>
+                <div class="peter">
+                    <img src="img/enzoVelho.gif" alt="">
+                </div>
+            </ul>
+        </div> <br>
+
+        <div id="footer_copyright">
+            <strong>&#169 Todos os direitos reservados ao 3AR!</strong>
+        </div>
+    </footer>
+</body>
+
+</html>

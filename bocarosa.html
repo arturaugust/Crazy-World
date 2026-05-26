@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <img class="logo" src="img/Design_sem_nome-removebg-preview-removebg-preview.png" alt="Logo">
+                <h2 id="mensagem" class="bem-vindo">Carregando...</h2>
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#footer_content">Converse Comigo!</a></li>
+                <li><a href="cadastro.html" onclick="logout()">Sair</a></li>
+
+                <div class="pesquisa">
+                    <input type="text" class="pesquisando" placeholder="Encontre o seu lugar🌟...">
+                    <a class="botao-pesquisa">
+                        <img class="lupa" src="img/lupa.png" alt="Lupa de pesquisa">
+                    </a>
+                </div>
+            </ul>
+        </nav>
+
+        <script>
+            const usuarioLogin = localStorage.getItem("usuarioLogin");
+
+            if (usuarioLogin) {
+                document.getElementById("mensagem").innerText = `Bem-vindo, ${usuarioLogin}!`;
+            } else {
+                document.getElementById("mensagem").innerText = "Usuário não autenticado!";
+            }
+
+            function logout() {
+                localStorage.removeItem("usuarioLogin");
+                window.location.href = "cadastro.html";
+            }
+        </script>
+    </header>
+    <br> <br>
+    <section class="body-container">
+        <div class="init">
+            <div class="perfil">
+                <img class="foto-perfil" src="img/bocarosa.jpeg" alt="Foto de perfil">
+                <div class="descricao"><br>
+                    <h2 class="nome-perfil">Boca Rosa🫦</h2><br>
+                    <p>Meu nome é Bianca Boca Rosa, A mulher mais empresária do Brasil.</p>
+                    <p>CEO da linha de cosméticos: Boca Rosa🫦</p>
+                    <p class="status">Status: Online</p>
+                    <p class="atividade">Última atividade: 7 minutos atrás</p> <br>
+                </div>
+            </div>
+        </div><br><br>
+
+        <div class="blog1">
+            <img src="img/bcrosa.gif">
+            <div class="descricao">
+                <h2>Olhem minha Boca Rosa🫦</h2><br>
+                <p> Apresento a vocês a nova linha de batons da Boca Rosa, A Qualidade é incomparável, beijinho no ombro para as outras marcas😘
+                </p>
+            </div>
+        </div><br><br>
+
+        <div class="blog2">
+            <div class="descricao">
+                <h2>Qualidade da Base Boca Rosa</h2>
+                <br>
+                <p>Somos uma equipe de especialistas apaixonados por cosméticos,e hoje viemos testar a famosa Base da
+                    Boca Rosa Matte.
+                </p> <br>
+                <p>Esse teste nos proporcionou momentos de felicida, paixão e glamour, Todos os telespectadores
+                    amaram o resultado, OBRIGADO POR ASSISTIREM👄.</p>
+            </div>
+            <img src="img/rosa.jpg">
+        </div>
+
+    </section>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contact">
+                <h1>Crazy World</h1>
+                <br>
+                <p>Pensamentos fora da curva para um mundo fora do normal!😝</p>
+                <br>
+                <a class="footer-link" href="bem-vindo.html">Voltar Para O Home!</a><br>
+                <a class="footer-link" href="felca.html"> Felca🧍</a><br>
+                <a class="footer-link" href="pimposo.html">Enzo👨‍💻</a><br>
+            </div>
+
+            <ul class="footer-list">
+
+                <h3>Assista Meus Vídeos no Youtube⬇️</h3> <br>
+
+                <a class="footer-link" href="https://www.tiktok.com/@felquinhas/video/7124334242212875526"
+                    target="_blank">Teste da Base</a> <br><br>
+                <a class="footer-link" href="https://www.tiktok.com/@cortesfelca/video/7102152585984888070w"
+                    target="_blank">Live NPC</a><br><br>
+                <a class="footer-link" href="https://www.youtube.com/watch?v=39HVf1Lbzqg" target="_blank">Boca rosa vs
+                    Felca</a> <br><br>
+            </ul>
+            <ul class="footer-list">
+                <h4>Não deixem de me acompanhar👄</h4>
+                <br>
+                <div class="peter">
+                    <img src="img/roo.gif" alt="">
+                </div>
+            </ul>
+        </div> <br>
+
+        <div id="footer_copyright">
+            <strong>&#169 Todos os direitos reservados ao 3AR!</strong>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav class="navbar">
+        <ul class="menu">
+            <img class="logo" src="img/Design_sem_nome-removebg-preview-removebg-preview.png">
+            <h2 id="mensagem" class="bem-vindo">Carregando...</h2>
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#footer">Converse Comigo!</a></li>
+            <li><a href="cadastro.html">Sair</a></li>
+
+            <div class="pesquisa">
+                <input type="text" class="pesquisando" placeholder="Encontre o seu lugar🌟...">
+                <a class="botao-pesquisa">
+                    <img class="lupa" src="img/lupa.png">
+                </a>
+            </div>
+
+        </ul>
+
+        <script>
+            const usuarioLogin = localStorage.getItem("usuarioLogin");
+
+            if (usuarioLogin) {
+                document.getElementById("mensagem").innerText = `Bem-vindo, ${usuarioLogin}!`;
+            } else {
+                document.getElementById("mensagem").innerText = "Usuário não autenticado!";
+            }
+
+            function logout() {
+                localStorage.removeItem("usuarioLogin");
+                window.location.href = "cadastro.html";
+            }
+        </script>
+</header>
+
+<body>
+    <br><br>
+
+    <div class="body-container"><br>
+
+        <h1 class="titulo">Os blogueiros mais talentosos e criativos da CrazyWorld!</h1><br>
+        <div class="blogueiros">
+            <div class="pagina">
+            <img src="img/zzz.jpg">
+            <p>Garoto de Programa</p>
+            <h3>Enzo Martins</h3>
+            <p>O programador mais talentoso do Brasil! Ele é o responsável por criar os melhores códigos perfeitamente!</p>
+            <li><a href="pimposo.html" class="saiba">Saiba Mais</a></li>
+        </div>
+        <div class="pagina">
+            <img src="img/bcccc.jpg">
+            <p>Empresária</p>
+            <h3>Bianca Andrade</h3>
+            <p>Ela é a empresária mais famosa do Brasil! Ela é a responsável por criar os melhores produtos de beleza!</p>
+            <li><a href="bocarosa.html" class="saiba">Saiba Mais</a></li>
+        </div>
+        <div class="pagina">
+            <img src="img/fefe.png">
+            <p>Influencer</p>
+            <h3>Felca</h3>
+            <p>Ele é o influencer mais famoso do Brasil! Ele é o responsável por criar os melhores conteúdos da internet!</p>
+            <li><a href="felca.html" class="saiba" >Saiba Mais</a></li>
+        </div>
+    </div><br><br><br><br><br><br>
+    <div class="bem-vindo-gif">
+        <img src="img/shrek.gif">
+        <p>Ficamos sem ideias👍👨‍🦲👍</p>
+    </div>
+    </div>  
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contact">
+                <h1>Crazy World</h1>
+                <br>
+                <p>Pensamentos fora da curva para um mundo fora do normal!😝</p>
+                <br>
+                <a id="links"
+                    href="https://www.instagram.com/enzo_ea/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
+                    target=blank>Enzo Martins👍🏻🧔🏻👍🏻</a> <br>
+                <a id="links"
+                    href="https://www.instagram.com/bianca/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
+                    target=blank>Boca Rosa👄</a> <br>
+                <a id="links"
+                    href="https://www.instagram.com/felca0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target=blank>Felca, O Garoto
+                    problemático</a>
+            </div>
+
+            <ul class="footer-list">
+                <p><h2>Criadores</h2>
+                <br>
+
+                <a id="links"
+                    href="https://www.instagram.com/adrean_maganin/?utm_source=qr&igsh=MTkwMXcxajVjb3dhNQ%3D%3D#"
+                    target=blank>Adrean, o platinado</a> <br>
+                <a id="links" target=blank>Anna Júlia, a mais mais </a> <br>
+                <a id="links" href="https://www.instagram.com/arts_alvs/?igsh=MWExcjZ5em5yZmF6NQ%3D%3D#"
+                    target=blank>Artur, o peter griffin</a> <br>
+                <a id="links" href="https://www.instagram.com/rochamei_/?igsh=anc2dmRkYWhhdXZj#" target=blank>Rochaelly,
+                    a diva</a>
+                </p>
+            </ul>
+            <ul class="footer-list">
+                <div class="peter">
+                    <img src="img/peter.gif" alt="">
+                </div>
+            </ul>
+        </div>
+        <br>
+        <div id="footer_copyright"><strong>
+                &#169
+                Todos os direitos reservados ao 3AR!
+            </strong>
+        </div>
+    </footer>
+</body>
